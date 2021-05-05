@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/ownerSetting.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+    <title>P!ckO Profile</title>
+</head>
+<body>
+    <div id="container">
+        <div class="container profile animate__animated animate__jackInTheBox" style="overflow-y:auto; text-transform: capitalize;">
+        <div class="row">
+            <div class="col-md-3 profile-left">
+                <img id="HomeLogo" src="img/logo.png" style="cursor: pointer;" alt=""/>
+                <h1>P!CKO</h1>
+                <p>Store Setting Page!!</p><br><br>
+        </div>
+        <div class="col-md-9 profile-right">
+            <h3 class="profile-heading">Store Information<hr class="hr"></h3>
+            <form id="profile-form">
+                <div class="row profile-form tab-content">
+                    <div class="col-md-6 ">
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Owner" id='ownerEmail' value="Cute" required readonly="readonly"/>
+                        <label for="first" class="form__label">Owner</label>
+                      </div>
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Store Name" id='name' value="CT" required readonly/>
+                            <label for="email" class="form__label">Store Name</label>
+                          </div>
+                          <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Description" id='description' value="1231231234" required />
+                            <label for="phone" class="form__label">Description</label>
+                          </div>
+                          <div class="form__group field">
+                            <select name="potencial" id="Type" class="custom-select sources" placeholder="Type" style="overflow-y: auto;">
+                              <option value="DH" selected>Type</option>
+                              <option value="american" >American</option>
+                              <option value="asian">Asian</option>
+                              <option value="pizza">Pizza</option>
+                              <option value="mexican">Mexican</option>
+                              <option value="vegan">Vegan</option>
+                              <option value="fastfood">Fast Food</option>
+                              <option value="drink">Drink</option>
+                    
+                            </select>
+                          </div>
+
+
+
+                          
+                      
+                          <div class="form__group field">
+                            <select name="potencial" id="Time-Open" class="custom-select sources" placeholder="Time Close" style="overflow-y: auto;">
+                              <option value="DH" selected>Time open</option>
+                              <option value="12:00AM" >12:00 AM</option>
+                              <option value="1:00AM">1:00 AM</option>
+                              <option value="2:00AM">2:00 AM</option>
+                              <option value="3:00AM">3:00 AM</option>
+                              <option value="4:00AM">4:00 AM</option>
+                              <option value="5:00AM">5:00 AM</option>
+                              <option value="6:00AM">6:00 AM</option>
+                              <option value="7:00AM">7:00 AM</option>
+                              <option value="8:00AM">8:00 AM</option>
+                              <option value="9:00AM">9:00 AM</option>
+                              <option value="10:00AM">10:00 AM</option>
+                              <option value="11:00AM">11:00 AM</option>
+                              <option value="12:00PM">12:00 PM</option>
+                              <option value="1:00PM">1:00 PM</option>
+                              <option value="2:00PM">2:00 PM</option>
+                              <option value="3:00PM">3:00 PM</option>
+                              <option value="4:00PM">4:00 PM</option>
+                              <option value="5:00PM">5:00 PM</option>
+                              <option value="6:00PM">6:00 PM</option>
+                              <option value="7:00PM">7:00 PM</option>
+                              <option value="8:00PM">8:00 PM</option>
+                              <option value="9:00PM">9:00 PM</option>
+                              <option value="10:00PM">10:00 PM</option>
+                              <option value="11:00PM">11:00 PM</option>
+                            </select>
+                          </div>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Address" id='address' value="Chestnut" required readonly="readonly" />
+                            <label for="address" class="form__label">Address</label>
+                          </div>
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="City" id='city' value="Buffalo" required  readonly="readonly"/>
+                            <label for="city" class="form__label">City</label>
+                          </div>
+                          <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="State" id='state' value="NY" required readonly="readonly"/>
+                            <label for="state" class="form__label">State</label>
+                          </div>
+                          <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Zip Code" id='zip' value="14228" required readonly="readonly"/>
+                            <label for="zip" class="form__label">Zip Code</label>
+                          </div>
+                          <div class="form__group field">
+                            <select name="potencial" id="Time-Close" class="custom-select sources" placeholder="Time Close" style="overflow-y: auto;">
+                              <div style="overflow-y: auto;">
+                                <option value="DH" selected>Time Close</option>
+                                <option value="12:00AM" >12:00 AM</option>
+                                <option value="1:00AM">1:00 AM</option>
+                                <option value="2:00AM">2:00 AM</option>
+                                <option value="3:00AM">3:00 AM</option>
+                                <option value="4:00AM">4:00 AM</option>
+                                <option value="5:00AM">5:00 AM</option>
+                                <option value="6:00AM">6:00 AM</option>
+                                <option value="7:00AM">7:00 AM</option>
+                                <option value="8:00AM">8:00 AM</option>
+                                <option value="9:00AM">9:00 AM</option>
+                                <option value="10:00AM">10:00 AM</option>
+                                <option value="11:00AM">11:00 AM</option>
+                                <option value="12:00PM">12:00 PM</option>
+                                <option value="1:00PM">1:00 PM</option>
+                                <option value="2:00PM">2:00 PM</option>
+                                <option value="3:00PM">3:00 PM</option>
+                                <option value="4:00PM">4:00 PM</option>
+                                <option value="5:00PM">5:00 PM</option>
+                                <option value="6:00PM">6:00 PM</option>
+                                <option value="7:00PM">7:00 PM</option>
+                                <option value="8:00PM">8:00 PM</option>
+                                <option value="9:00PM">9:00 PM</option>
+                                <option value="10:00PM">10:00 PM</option>
+                                <option value="11:00PM">11:00 PM</option>
+                            </div>
+                            </select>
+                          </div>
+                        <input type="submit" class="profile-save"    value="Save" id="Save" disabled>
+                    </div>
+                </div>
+            </form>
+        
+        </div>
+        
+        </div>
+        
+    </div>
+    <div id="id01" class="modal ">
+        <form class="modal-content animate" id="change-password-form">
+            <h6>Set New Password</h6>
+            <div class="col-md-12">
+            <div class="form__group field">
+                <input type="password" class="form__field" placeholder="Old Password" id='old-pw' required />
+                <label for="old-pw" class="form__label">Old Password</label>
+              </div>
+              <div class="form__group field">
+                <input type="password" class="form__field" placeholder="New Password" id='new-pw' required />
+                <label for="new-pw" class="form__label">New Password</label>
+              </div>
+              <div class="form__group field">
+                <input type="password" class="form__field" placeholder="Confirm New Password" id='c-new-pw' required />
+                <label for="c-new-pw" class="form__label">Confirm New Password</label>
+              </div>
+              <br><br>
+              <div id="container-123" class="inner">
+                <button class="learn-more password-change" id="but">
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">Change!</span>
+                </button>
+              </div>
+              <div id="container-123" class="inner">
+                <button class="learn-more" id="but" onclick="document.getElementById('id01').style.display='none'">
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">Cancel!</span>
+                </button>
+              </div>
+                </div>
+                <br>
+        </form>
+      </div>
+      <div id="id02" class="modal"> 
+        <div id="containerEmote" class="animate">
+            <div id="success-box">
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+              </div>
+              <div class="shadow scale"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Success!</h1><p id='pemote-success'>Your Profile Has Been Updated Successfully!!</p></div>
+                <button type='submit' class="success-button-box"><h1 id='h1emote' class="green" >continue</h1></button>
+            </div>
+            <div id="error-box">
+              <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+              </div>
+              <div class="shadow move"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Error!</h1><p id='pemote-fail'>email or phone are already registered.</div>
+              <button class="fail-button-box"><h1 id='h1emote' class="red">try again</h1></button>
+            </div>
+          </div>
+          
+    </div>
+</body>
+<script src="./js/storeSetting.js"></script>
+</html>

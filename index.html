@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+        <title>P!ckO</title>
+</head>
+<body>
+    
+    <div id="container">
+    <div class="container register animate__animated animate__jackInTheBox" id="Login-Table">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="img/logo.png" alt=""/>
+                    <h1>P!CKO</h1>
+                    <p>Fastest Food Deliver App.<br>Your Best Choice!</p>
+                    <p>Not Part of Us? <br> Register Here <br> Join Us!!</p>
+                    <input type="submit" class="btnRegiter"  value="Register"/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="Client-Login"data-toggle="tab" href="#Login-Client" value="Client">Client</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="Driver-Login" data-toggle="tab" href="#Login-Driver" value="Driver">Driver</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="Owner-Login" data-toggle="tab" href="#Login-Owners" value="Owners">Owner</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+    
+                            <h3 class="register-heading">Login<hr class="hr"></h3>
+                            
+                            <div class="row register-form">
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email *" value="" id="username"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" id="login-password"/>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="submit" class="Login-Button"  value="Login" id="login" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="id02" class="modal"> 
+                            <div id="containerEmote" class="animate">
+                                <div id="error-box-02">
+                                  <div class="face2">
+                                    <div class="eye"></div>
+                                    <div class="eye right"></div>
+                                    <div class="mouth sad"></div>
+                                  </div>
+                                  <div class="shadow move"></div>
+                                  <div class="message"><h1 id='h1emote' class="alert">Error!</h1><p id='pemote-fail-02'>Wrong email or password.</div>
+                                  <button class="fail-button-box" onclick="document.getElementById('id02').style.display='none'"><h1 id='h1emote' class="red">try again</h1></button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+    <div class="container register animate__animated animate__jackInTheBox" id="Register-Table">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="img/logo.png" alt=""/>
+                <h1>P!CKO</h1>
+                <p>Fastest Food Deliver App.<br>Your Best Choice!</p>
+                <p>Already One of Us? <br> Login Here <br> We've Miss You!!</p>
+                <input type="submit" class="btnLogin"  value="Login"/>
+            </div>
+            <div class="col-md-9 register-right">
+                     <ul class="nav nav-tabs nav-justified" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Client-Register"data-toggle="tab" href="#Client" value="Client">Client</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Driver-Register" data-toggle="tab" href="#Driver" value="Driver">Driver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Owner-Register" data-toggle="tab" href="#Owners" value="Owners">Owner</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="Client-Content">
+                        <h3 class="register-heading">Register<hr class="hr"></h3>
+                        <form id=register-form-1>
+                        <div class="row register-form tab-content">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <input type="email" name='username' class="form-control" placeholder="Your Email *" value="" id="user-email"  required/>
+                                    <span id='email-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" value="" id="phone" required/>
+                                    <span id='phone-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" id="first" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" id="last" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address Line 1 *" value="" id="add1" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City *" value="" id="city" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="State *" value="" id="state" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Zipcode *" value="" id="zip" required />
+                                </div>
+                                <div class="form-group license">
+                                    <input type="number" class="form-control" placeholder="License *" value="" id="license" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" id="register-password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" id="confirm-password" required/>
+                                    <span id='message'></span>
+                                </div>
+                                <input type="submit" class="btnRegister" value="Register" id="Register"/>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                    <div id="id01" class="modal"> 
+                        <div id="containerEmote" class="animate">
+                            <div id="success-box">
+                              <div class="face">
+                                <div class="eye"></div>
+                                <div class="eye right"></div>
+                                <div class="mouth happy"></div>
+                              </div>
+                              <div class="shadow scale"></div>
+                              <div class="message"><h1 id='h1emote' class="alert">Success!</h1><p id='pemote-success'>Welcome to p1cko.</p></div>
+                                <button type='submit' class="success-button-box"><h1 id='h1emote' class="green" >continue</h1></button>
+                            </div>
+                            <div id="error-box">
+                              <div class="face2">
+                                <div class="eye"></div>
+                                <div class="eye right"></div>
+                                <div class="mouth sad"></div>
+                              </div>
+                              <div class="shadow move"></div>
+                              <div class="message"><h1 id='h1emote' class="alert">Error!</h1><p id='pemote-fail'>email or phone are already registered.</div>
+                              <button class="fail-button-box"><h1 id='h1emote' class="red">try again</h1></button>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- <div class="tab-content" id="Driver-Content">
+                        <h3 class="register-heading">Register<hr class="hr"></h3>
+                        <form  action="/register-driver" method="post">
+                            <div class="row register-form tab-content">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" id="user-email" oninput="checkUsername()" required/>
+                                    <span id='email-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" value=""  oninput="checkUsername()" id="phone" required/>
+                                    <span id='phone-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" id="first" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" id="last" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address Line 1 *" value="" id="add1" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City *" value="" id="city" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="State *" value="" id="state" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Zipcode *" value="" id="state" required />
+                                </div>
+                                <div class="form-group license">
+                                    <input type="number" class="form-control" placeholder="License *" value="" id="license" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" id="register-password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" id="confirm-password" required/>
+                                    <span id='message'></span>
+                                </div>
+                                <input type="submit" class="btnRegister"  onclick="test()" value="Register" id="Register"/>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="tab-content" id="Owner-Content">
+                        <h3 class="register-heading">Register<hr class="hr"></h3>
+                        <form  action="/register-owner" method="post">
+                            <div class="row register-form tab-content">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" id="user-email" oninput="checkUsername()" required/>
+                                    <span id='email-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" value=""  oninput="checkUsername()" id="phone" required/>
+                                    <span id='phone-already-exists' style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" id="first" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" id="last" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address Line 1 *" value="" id="add1" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="City *" value="" id="city" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="State *" value="" id="state" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Zipcode *" value="" id="state" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password *" value="" id="register-password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" id="confirm-password" required/>
+                                    <span id='message'></span>
+                                </div>
+                                <input type="submit" class="btnRegister"  onclick="test()" value="Register" id="Register"/>
+                            </div>
+                        </div>
+                    </form>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js" ></script>
+</body>
+</html>

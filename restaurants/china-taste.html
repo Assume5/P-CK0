@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="../css/restaurants.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>China Taste</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-default">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="welcome-user"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="../home"><img src="../img/logo_icon.png" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavigation" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="myNavigation">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link cartButton" href="../cart"><i class="fa fa-shopping-cart" aria-hidden="true" ></i><span class='badge badge-warning' id='lblCartCount'>0</span> Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../orderhistory"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profile#Client"><i class="fa fa-user-circle" aria-hidden="true"></i> My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="signOut()" > <i class="fa fa-sign-out" aria-hidden="true"></i> SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="containerMenu">
+    </div>
+    <div class="container register animate__animated animate__fadeInUp">
+    <br>
+    </div>
+    </div>
+    <div id="id01" class="modal"> 
+        <div id="containerEmote" class="animate">
+            <div id="success-box">
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+              </div>
+              <div class="shadow scale"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Success!</h1><p id='pemote-success'>Welcome to p1cko.</p></div>
+                <button type='submit' class="success-button-box"><h1 id='h1emote' class="green" >continue</h1></button>
+            </div>
+            <div id="error-box">
+              <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+              </div>
+              <div class="shadow move"></div>
+              <div class="dot"></div>
+
+              <div class="message"><h1 id='h1emote' class="alert">Error!</h1><p id='pemote-fail'>email or phone are already registered.</div>
+                <button class="fail-button-box"><h1 id='h1emote' class="red">yes</h1></button>
+            </div>
+          </div>
+    </div>
+
+    
+    <div id="id02" class="modal"> 
+    </div>
+
+    <script src="../js/restaurants.js"></script>
+</body>
+</html>

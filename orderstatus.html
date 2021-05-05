@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="../css/restaurants.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/owner.css">
+        <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="css/order.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>P!CKO Order History</title>
+        <style>
+            body{
+                font-size: 15px;
+            }
+            p{
+                color:#fff
+            }
+            .alignleft {
+	            float: left;
+            }   
+            .alignright {
+            	float: right;
+            }
+            body { margin: 0; padding: 0; }
+            .map { position: absolute; top: 22; bottom: 0; width: 60%; height: 89.7%;}
+        </style>
+</head>
+<body onload="getlocation()">
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-default">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="welcome-user"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="./"><img src="img/logo_icon.png" alt="" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavigation" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="myNavigation">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link cartButton" href="./cart"><i class="fa fa-shopping-cart" aria-hidden="true" ></i><span class='badge badge-warning' id='lblCartCount'>0</span> Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./orderhistory"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile"><i class="fa fa-user-circle" aria-hidden="true"></i> My Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="signOut()" > <i class="fa fa-sign-out" aria-hidden="true"></i> SignOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container register animate__animated animate__fadeInUp" style="width: 40%; float:right; height: 89.7vh; margin: 0%; text-transform: capitalize;">
+                <h5>Status</h5>
+                <div class='radio-group' style="font-size: 11px;">
+                    
+                  <label class='radio-label'>
+                      <input name='status' type='radio' id='status1' checked='checked' disabled>
+                      <span class='inner-label'>Awaiting Owner</span>
+                  </label>
+                  <label class='radio-label'>
+                      <input name='status' type='radio' id='status2' disabled>
+                      <span class='inner-label'>Awaiting Driver</span>
+                  </label>
+                  <label class='radio-label'>
+                      <input name='status' type='radio' id='status3' disabled>
+                      <span class='inner-label'>Picking Up</span>
+                  </label>
+                  <label class='radio-label'>
+                      <input name='status' type='radio' id='status4' disabled>
+                      <span class='inner-label'>On the Way</span>
+                  </label>
+                  <label class='radio-label'>
+                    <input name='status' type='radio' id='status5' disabled>
+                    <span class='inner-label'>Delivered</span>
+                </label>
+              </div><br><br>
+              <!-- <p style="float:left;">Order: </p>
+              <p style="float:right;">China Taste</p><br><br>
+              <p style="float:right;">3/20/2021 - 5:44 PM</p><br><br><hr> <br>
+              <p style="display: inline-block; padding-right: 100px; float: left;">1</p>
+              <p style="display: inline-block; padding-right: 100px; float: left;">Beef Ramen</p>
+              <p style="float: right;">18.99 $</p> <br><br><hr><br>
+              <p style="float: left;" id="total-items">Sub Total: </p>
+              <p style="float: right;" id="total-items">36.98$$</p> <br><br>
+              <p style="float: left;" id="total-items">Tax&Fee: </p>
+              <p style="float: right;" id="total-items">36.98$$</p> <br><br>
+              <p style="float: left;" id="total-items">Delivery Fee: </p>
+              <p style="float: right;" id="total-items">36.98$$</p> <br><br>
+              <p style="float: left;" id="total-items">Driver Tip: </p>
+              <p style="float: right;" id="total-items">36.98$$</p> <br><br>
+              <p style="float: left;" id="total-items">Total: </p>
+              <p style="float: right;" id="total-items">36.98$$</p> <br><br>
+              <div style="clear: both;"></div> -->
+        </div>
+        <br>
+        <div id="map" class="map"></div>
+        <!-- <script type="text/javascript">
+        setInterval(updatelocation_realtime,4000);
+        </script> -->
+    
+    </div>
+    <div id="id01" class="modal"> 
+        <div id="containerEmote" class="animate">
+            <div id="success-box">
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+              </div>
+              <div class="shadow scale"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Success!</h1><p id='pemote-success'>Welcome to p1cko.</p></div>
+                <button type='submit' class="success-button-box"><h1 id='h1emote' class="green" >continue</h1></button>
+            </div>
+            <div id="error-box">
+              <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+              </div>
+              <div class="shadow move"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Error!</h1><p id='pemote-fail'>email or phone are already registered.</div>
+              <button class="fail-button-box"><h1 id='h1emote' class="red">try again</h1></button>
+              
+            </div>
+          </div>
+    </div>
+    <script src="./js/orderstatus.js"></script>
+</body>
+</html>

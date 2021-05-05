@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="../css/restaurants.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/owner.css">
+        <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/cart.css">
+        <title>P!CKO Owner</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-default">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="welcome-user"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="#"><img src="img/logo_icon.png" alt="" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavigation" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="myNavigation">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./orderowner"><i class="fa fa-history" aria-hidden="true"></i> Orders</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile#Owner"><i class="fa fa-user-circle" aria-hidden="true"></i> My Account</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./setting"><i class="fa fa-cog" aria-hidden="true"></i> Store Setting</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="signOut()" > <i class="fa fa-sign-out" aria-hidden="true"></i> SignOut</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="containerMenu">
+            <div class="link">
+                <div class="text" >Beef</div>
+            </div>
+            <div class="link">
+                <div class="text" >Chicken</div>
+            </div>
+            <div class="link">
+                <div class="text" >Lamb</div>
+            </div>
+            <div class="link">
+              <div class="text" >meat</div>
+          </div>
+          <div class="link">
+              <div class="text" >Seafood</div>
+          </div>
+          <div class="link">
+              <div class="text" >Noodle</div>
+          </div>
+          <div class="link">
+            <div class="text" >SIDE</div>
+        </div>
+        <div class="link">
+            <div class="text" >SOUP</div>
+        </div>
+        <div class="link">
+            <div class="text" >VEGAN</div>
+        </div>
+        <div class="link">
+          <div class="text" >DRINK</div>
+      </div>
+      <div class="link">
+          <div class="text" >OOS</div>
+      </div>
+        </div>
+        <div class="container register animate__animated animate__fadeInDown">
+            <div id="beef">
+                <h4 style="float:left;color: white;"> Beef</h4>
+                <button  id="add-one-meal" value="beef" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all" value="beef" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+                <!-- <div class="content">
+                    <div class="cardOwner">
+                        <div class="icon"><img src="./img/beef.png"></div>
+                        <p class="title">Beef Ramen</p>
+                        <p class="text"> A favoured weekend brunch, poached eggs are an increasingly popular dish of choice</p><br><br>
+                        <p class="text">Price: 22.00$ </p> 
+                        <div class="text">
+                            <div id="containerButton">
+                                <button class="learn-more edit" id="beef ramen,22.00,china-taste,beef">
+                                      <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                      </span>
+                                      <span class="button-text">Edit</span>
+                                    </button>
+                              </div> 
+                            <div id="containerButton">
+                                <button class="learn-more delete" id="beef ramen,22.00,china-taste,beef">
+                                      <span class="circle" aria-hidden="true">
+                                        <span class="icon arrow"></span>
+                                      </span>
+                                      <span class="button-text">Remove</span>
+                                    </button>
+                              </div> 
+                        </div> 
+                    </div>
+            </div> -->
+            </div>
+            <br>
+            <div id="chicken">
+                <h4 style="float:left;color: white;"> Chicken</h4>
+                <button id="add-one-meal"value="chicken" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="chicken" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+            </div>
+            <br>
+            <div id="lamb">
+                <h4 style="float:left;color: white;"> Lamb</h4>
+                <button id="add-one-meal"  value="lamb"style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="lamb"style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"> <br><br>
+            </div>
+            <br>
+            <div id="pork">
+                 <h4 style="float:left;color: white;"> Pork</h4>
+                 <button id="add-one-meal"  value="pork" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                 <button id="del-all"  value="pork" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                 <hr style="float: left;"><br><br>  
+            </div>
+            <br>
+            <div id="meat">
+                <h4 style="float:left;color: white;">Other meat</h4>
+                <button id="add-one-meal"  value="meat" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="meat" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+            </div>
+            <br>
+            <div id="seafood">
+              <h4 style="float:left;color: white;">Seafood</h4>
+              <button id="add-one-meal"  value="seafood" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+              <button id="del-all"  value="seafood" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+              <hr style="float: left;"><br><br>  
+         </div>
+         <br>
+            <br>
+            <div id="noodle">
+                <h4 style="float:left;color: white;"> Noodle</h4>
+                <button id="add-one-meal"  value="noodle" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="noodle" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+            </div>
+            <br>
+            <div id="side">
+                <h4 style="float:left;color: white;"> Side</h4>
+                <button id="add-one-meal"  value="side" style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="side" style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>    
+            </div>
+            <br>
+            <div id="soup">
+                <h4 style="float:left; color: white;"> Soup</h4>
+                <button id="add-one-meal"  value="soup"  style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="soup"  style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+            </div>
+            <br>
+            <div id="vegan">
+                <h4 style="float:left;color: white;"> Vegan</h4>
+                <button id="add-one-meal"  value="vegan"  style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+                <button id="del-all"  value="vegan"  style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+                <hr style="float: left;"><br><br>
+            </div>
+            <div id="drink">
+              <h4 style="float:left;color: white;"> drink</h4>
+              <button id="add-one-meal"  value="drink"  style="float: right;"><i class="fa fa-plus-circle fa-2x" style="float: right; color: orange;" aria-hidden="true"></i></button>
+              <button id="del-all"  value="drink"  style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+              <hr style="float: left;"><br><br>
+          </div>
+            <div id="oos">
+              <h4 style="float:left;color: white;"> Out of Stock</h4>
+              <button id="del-all"  value="oos"  style="float: right;"><i class="fa fa-trash fa-2x" aria-hidden="true" style="float: right; color: orange;  margin-right: 10px;"></i></button>
+              <hr style="float: left;"><br><br>
+          </div>
+            <br>
+        </div>
+    </div>
+    </div>
+    
+    <div id="add-meal" class="modal animate__animated animate__zoomIn" style="background-color: #201d37; overflow: auto;"> 
+      <div class="modal-contents">
+        <h4 style="color: #201d37;"> Add!</h4> <hr style="color: #201d37; width: 20%;"><br><br>
+        <p>Select menu type</p>
+        <div class="dropdown">
+          <div class="select">
+            <span id="spanid">menu type</span>
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <input type="hidden" name="type">
+          <ul class="dropdown-menu">
+            <li id="beef">beef</li>
+            <li id="chicken">chicken</li>
+            <li id="lamb">lamb</li>
+            <li id="pork">pork</li>
+            <li id="meat">other meat</li>
+            <li id="noodle">noodle</li>
+            <li id="side">side</li>
+            <li id="soup">soup</li>
+            <li id="vegan">vegan</li>
+          </ul>
+        </div><br>
+        <br>
+        <p style="float: left;">  Meal details</p> <br><br> <hr style="color: #201d37;"><br><br>
+        <div class="col-md-6"  style="margin: 0 auto;">
+          <div class="input-group mb-3  " style="border:1px solid #000;">
+            <span class="input-group-text" id="inputGroup-sizing-default">Meal name</span>
+            <input type="text" id="add-meal-name" class="form-control" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="input-group mb-3  " style="border:1px solid #000;">
+            <span class="input-group-text" id="inputGroup-sizing-default">Meal description</span>
+            <textarea class="form-control" id="add-meal-desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <p style="float: left;">  Meal price</p> <br><br> <hr style="color: #201d37;"><br><br>
+        <div class="col-md-6"  style="margin: 0 auto;">
+          <div class="input-group mb-3  " style="border:1px solid #000;">
+            <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+            <input type="number"  id="add-meal-price" class="form-control" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+        <p style="float: left;">  Meal status</p> <br><br> <hr style="color: #201d37;"><br><br>
+        <div class="radio-group" style="background-color: #332f35;">
+            <input type="radio" id="option-one" name="selector" value="Published" checked ><label id="radioL" for="option-one">Published</label>
+            <input type="radio" id="option-two" name="selector" value="oos"><label id="radioL"for="option-two">Out Of Stock</label>
+        </div> <br><br>
+        <div id="container-123" class="inner">
+          <button class="learn-more add" id="but">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Add!</span>
+          </button>
+        </div>
+        <div id="container-123" class="inner">
+          <button class="learn-more cancel-edit" id="but">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Cancel!</span>
+          </button>
+        </div> <br><br>
+      </div>
+  </div>
+  <div id="edit-meal" class="modal animate__animated animate__zoomIn" style="background-color: #201d37; overflow: auto;"> 
+    <div class="modal-contents">
+      <h4 style="color: #201d37;">Edit!</h4> <hr style="color: #201d37; width: 20%;"><br><br>
+      <p>Select menu type</p>
+      <div class="dropdown">
+        <div class="select">
+          <span>menu type</span>
+          <i class="fa fa-chevron-left"></i>
+        </div>
+        <input type="hidden" name="type">
+        <ul class="dropdown-menu">
+          <li id="beef">beef</li>
+          <li id="chicken">chicken</li>
+          <li id="lamb">lamb</li>
+          <li id="pork">pork</li>
+          <li id="meat">other meat</li>
+          <li id="noodle">noodle</li>
+          <li id="side">side</li>
+          <li id="soup">soup</li>
+          <li id="vegan">vegan</li>
+        </ul>
+      </div><br>
+      <br>
+      <p style="float: left;">  Meal details</p> <br><br> <hr style="color: #201d37;"><br><br>
+      <div class="col-md-6"  style="margin: 0 auto;">
+        <div class="input-group mb-3  " style="border:1px solid #000;">
+          <span class="input-group-text" id="inputGroup-sizing-default">Meal name</span>
+          <input type="text" id="edit-meal-name" class="form-control" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3  " style="border:1px solid #000;">
+          <span class="input-group-text" id="inputGroup-sizing-default">Meal description</span>
+          <textarea class="form-control" id="meal-desc" rows="3"></textarea>
+        </div>
+      </div>
+      <p style="float: left;">  Meal price</p> <br><br> <hr style="color: #201d37;"><br><br>
+      <div class="col-md-6"  style="margin: 0 auto;">
+        <div class="input-group mb-3  " style="border:1px solid #000;">
+          <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+          <input type="number" id="edit-price" class="form-control" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <p style="float: left;">  Meal status</p> <br><br> <hr style="color: #201d37;"><br><br>
+                <!-- <input type="radio" id="option-one" name="selector" value="published" ><label id="radioL" for="option-one">Published</label>
+          <input type="radio" id="option-two" name="selector" value="oos"><label id="radioL"for="option-two">Out Of Stock</label> -->
+          <div class="radio-group" style="background-color: #332f35;">
+            <input type="radio" id="option-three" class="edit-option-one" name="selector" value="published"><label id="radioL"for="option-three">Published</label>
+            <input type="radio" id="option-four" class="edit-option-two" name="selector" value="oos"><label id="radioL" for="option-four">Out Of Stock</label>
+        </div> <br><br>
+      <div id="container-123" class="inner">
+        <button class="learn-more edit-change" id="but">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Edit!</span>
+        </button>
+      </div>
+      <div id="container-123" class="inner">
+        <button class="learn-more cancel-edit" id="but">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Cancel!</span>
+        </button>
+      </div> <br><br>
+    </div>
+</div>
+    <div id="id01" class="modal"> 
+        <div id="containerEmote" class="animate">
+            <div id="success-box">
+              <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+              </div>
+              <div class="shadow scale"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Success!</h1><p id='pemote-success'>Welcome to p1cko.</p></div>
+                <button type='submit' class="success-button-box"><h1 id='h1emote' class="green" >continue</h1></button>
+            </div>
+            <div id="error-box">
+              <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+              </div>
+              <div class="shadow move"></div>
+              <div class="dot" onclick="document.getElementById('id01').style.display='none'"></div>
+              <div class="message"><h1 id='h1emote' class="alert">Please confirm!</h1><p id='pemote-fail'>Are you sure you want to remove this? Click top right dot to close.</div>
+              <button class="fail-button-box"><h1 id='h1emote' class="red">Yes!</h1></button>
+            </div>
+          </div>
+    </div>
+    <script src="./js/owner.js"></script>
+</body>
+</html>
