@@ -124,7 +124,7 @@ Since this app is under development we can ignore the verification step for now,
 ## After you installed all the requirements, you may start using the app.
 
 ###
-    cd P!CK0
+    cd P1CK0
     server.py
 ### 
 ### This will listen on the local host 8080, so open the browser then types http://localhost:8080/. By doing that you should see a login interface. If you see the login interface then you may start using the app!
