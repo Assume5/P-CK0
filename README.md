@@ -1,7 +1,7 @@
 # P!CK0
   ## Project description:
   ### 
-  P!CK0 is an online food ordering/delivering app, allowing customers and drivers to freely choose their orders based on possible order choices. Without very low tipped order being sent to the driver.
+  P!CK0 is an online food ordering/delivering web-base application, allowing customers and drivers to freely choose their orders based on possible order choices. Without very low tipped order being sent to the driver.
 
 There will be three interfaces. Users can register themselves to three different roles, such as Customer, Driver, Store Owners. Customers will be users that order foods, Drivers will be users that deliver food to the Customers, and Store Owners will be users that provide the food for customers to order. When users login, it will redirect users to their corresponding interface.
 
