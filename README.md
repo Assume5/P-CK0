@@ -131,5 +131,5 @@ Since this app is under development we can ignore the verification step for now,
 
 ### calDistance.py this will filter out restaurant that customer current zipcode > 15 miles.
 ## Tutorial
-### For a example use case please see the video!
+### For a example use case please see the video! There will be explanation in located in the caption, so make sure you have caption opened. 
     https://youtu.be/1aV7SXdvaf0
