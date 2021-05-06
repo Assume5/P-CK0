@@ -1,6 +1,3 @@
-if(document.URL=="https://www-student.cse.buffalo.edu/CSE442-542/2021-Spring/cse-442d/"){
-    window.location="./site.wsgi/";
-}
 //Animation
 $('#Register-Table').hide()
 $('.nav-tabs').on('click', function() {
