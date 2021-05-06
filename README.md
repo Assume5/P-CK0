@@ -117,11 +117,20 @@ Since this app is under development we can ignore the verification step for now,
         owner varchar(500) unique Not NULL,
         latlong varchar(500) Not null
     );
-    insert into restaurants (name,description,type, address, time,image,owner,latlong) values("china-taste", "traditional chinese food", "asian", "3332 Sheridan Dr, Buffalo, NY, 14226", "12:00 PM - 08:45 PM","./img/ramen.png","owner1@gmail.com","42.98084858617561, -78.8102731799607");
+### 
+## Now, let's insert restaurants so that they will display in the customer interface.
+###
+	insert into restaurants (name,description,type, address, time,image,owner,latlong) values("china-taste", "traditional chinese food", "asian", "3332 Sheridan Dr, Buffalo, NY, 14226", "12:00 PM - 08:45 PM","./img/ramen.png","owner1@gmail.com","42.98084858617561, -78.8102731799607");
 	insert into restaurants (name,description,type, address, time,image,owner,latlong) values("india-taste", "traditional india food", "asian", "3332 Sheridan Dr, Buffalo, NY, 14226", "12:00 PM - 08:45 PM","./img/ramen.png","owner2@gmail.com","42.98084858617561, -78.8102731799607");
 ### 
+## You must assign the owner's account that you had registered, or else the owner can't log in or modify/add their menus.
+### calDistance.py will filter out restaurants that customer's current zipcode > 15 miles. The MySQL code above was assigned zipcode 14226, so make sure you create a customer account within that 15 miles range. Feel free to modify the code above.
+### For the colum name, it represent restaurant name. Please replace " " to "-" and lowercase. For example I am assigning China Taste I need to change it to china-taste.
+### The reason I do it in this way because someone might provide a fake restaurant address and name, so we need to verify if this restaurant exists and is safe for the customer. After verifying the process we insert it into the database and assign the owner and set up HTML files.
+
 
 ## After you installed all the requirements, you may start using the app.
+
 
 ###
     cd P1CK0
@@ -129,7 +138,6 @@ Since this app is under development we can ignore the verification step for now,
 ### 
 ### This will listen on the local host 8080, so open the browser then types http://localhost:8080/. By doing that you should see a login interface. If you see the login interface then you may start using the app!
 
-### calDistance.py this will filter out restaurant that customer current zipcode > 15 miles.
 ## Tutorial
 ### For a example use case please see the video! There will be explanation located in the caption, so make sure you have caption opened. 
     https://youtu.be/1aV7SXdvaf0
