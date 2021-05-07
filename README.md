@@ -126,9 +126,10 @@ Since this app is under development we can ignore the verification step for now,
 ## You must assign the owner's account that you had registered, or else the owner can't log in or modify/add their menus.
 ### calDistance.py will filter out restaurants that customer's current zipcode > 15 miles. The MySQL code above was assigned zipcode 14226, so make sure you create a customer account within that 15 miles range. Feel free to modify the code above.
 ### For the colum name, it represent restaurant name. Please replace " " to "-" and lowercase. For example I am assigning China Taste I need to change it to china-taste.
-### The reason I do it in this way because someone might provide a fake restaurant address and name, so we need to verify if this restaurant exists and is safe for the customer. After verifying the process we insert it into the database and assign the owner and set up HTML files.
-
-
+### The reason we do it in this way because someone might provide a fake restaurant address and name, so we need to verify if this restaurant exists and is safe for the customer. After verifying the process we insert it into the database and assign the owner and set up HTML files.
+## Setting up a HTML files for restaurant.
+### Using the example above. I had inserted a restaurant name "china-taste" so inside the restaurants folder you should create a HTML file call "china-taste.html"
+### After creating china-taste.html, put restaurant-Template.html code into china-taste and make sure you put the restaurant name in the title tag. china-taste will be China Taste.
 ## After you installed all the requirements, you may start using the app.
 
 
